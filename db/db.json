@@ -1,0 +1,116 @@
+{
+  "codigopenal": [
+    {
+      "nome": "Desacato",
+      "descricao": "Desacato, desobediência ou desrespeito perante um tribunal ou oficiais da policia na forma de comportamento que se opõe ou desafia a autoridade, a justiça e a dignidade do tribunal. Um réu só pode ser cobrado uma vez por desacato.",
+      "dataCriacao": "2022-03-13T06:09:34.033Z",
+      "multa": "1000",
+      "tempoPrisao": "302",
+      "status": "2",
+      "id": 1
+    },
+    {
+      "nome": "Dinheiro Ilícito",
+      "descricao": "Estar em posse de dinheiro não declarado ou de natureza ilícita sem procedência. Agrava-se penalmente em 1 mês a cada R$1.000.",
+      "dataCriacao": "2022-03-13T06:09:22.306Z",
+      "multa": "1000",
+      "tempoPrisao": "21",
+      "status": "2",
+      "id": 2
+    },
+    {
+      "nome": "Falsa Identidade",
+      "descricao": "Se passar por um advogado certificado ou funcionário do governo (incluindo policiais, membros do Departamento de Justiça, etc.)",
+      "dataCriacao": "2022-03-12T18:04:34.531Z",
+      "multa": "555",
+      "tempoPrisao": "21",
+      "status": "2",
+      "id": 3
+    },
+    {
+      "nome": "Homicidio",
+      "descricao": "Homem mata outro",
+      "dataCriacao": "2022-03-12T20:43:00.099Z",
+      "multa": "150000",
+      "tempoPrisao": "635",
+      "status": "1",
+      "id": 5
+    },
+    {
+      "nome": "Furto",
+      "descricao": [
+        "Furtou itens de uma senhora que andava na rua"
+      ],
+      "dataCriacao": "2022-03-12T20:43:49.232Z",
+      "multa": "500",
+      "tempoPrisao": "20",
+      "status": "1",
+      "id": 6
+    },
+    {
+      "nome": "Assalto",
+      "descricao": [
+        "Assalto a mão armada"
+      ],
+      "dataCriacao": "2022-03-12T20:43:49.232Z",
+      "multa": "1500",
+      "tempoPrisao": "30",
+      "status": "1",
+      "id": 7
+    },
+    {
+      "nome": "novo relatorio",
+      "descricao": [
+        "bla bla bla bla bla bla bla bla bla"
+      ],
+      "dataCriacao": "2022-03-12T21:30:03.792Z",
+      "multa": "1000",
+      "tempoPrisao": "50",
+      "status": "2",
+      "id": 8
+    },
+    {
+      "nome": "Sequestro",
+      "descricao": [
+        "Sequestro a mão armada."
+      ],
+      "dataCriacao": "2022-03-12T23:56:00.610Z",
+      "multa": "20000",
+      "tempoPrisao": "300",
+      "status": "1",
+      "id": 11
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "descricao": "Ativo"
+    },
+    {
+      "id": 2,
+      "descricao": "Inativo"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Boltz",
+      "senha": "senhaboltz"
+    },
+    {
+      "id": 2,
+      "nome": "Mexecano",
+      "senha": "senhamexecano"
+    },
+    {
+      "id": 3,
+      "nome": "Tico",
+      "senha": "senhatico"
+    },
+    {
+      "id": 4,
+      "nome": "Teco",
+      "senha": "senhateco"
+    }
+  ]
+}
