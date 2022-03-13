@@ -29,6 +29,7 @@ module.exports = {
     'react/jsx-no-constructed-context-values': 'off',
     'react/prop-types': 'off',
     'consistent-return': 'off',
+    'no-alert': 'off',
   },
 
 };

@@ -8,19 +8,9 @@ export function UserProvider({ children }) {
   const [userContext, setUserContext] = useState();
   const [processosContext, setProcessosContext] = useState([]);
 
-  function handleUser(currentUser) {
-    if (currentUser) {
-      console.log('cccc');
-    }
-  }
-
-  async function getValues() {
-    console.log('bbbbb');
-  }
-
   return (
     <UserContext.Provider value={{
-      userContext, setUserContext, processosContext, setProcessosContext, getValues,
+      userContext, setUserContext, processosContext, setProcessosContext,
     }}
     >
       {children}

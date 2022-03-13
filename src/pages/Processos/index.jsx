@@ -20,23 +20,29 @@ function Processos() {
 
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
-  const [continuePagination, setContinuePagination] = useState(false);
-
-  const recarregaProcessos = useCallback((params) => {
-    buscaProcessos(params, setProcessosContext);
-  }, [processosContext]);
+  const [previousPagination, setPreviousPagination] = useState(false);
+  const [nextPagination, setNextPagination] = useState(false);
 
   function pagination(params) {
     const count = (page * params) - params;
 
-    if (count < total.length) {
-      setContinuePagination(true);
+    if (count >= 10) {
+      setPreviousPagination(false);
+      setNextPagination(true);
     }
 
-    if (count >= total.length) {
-      setContinuePagination(false);
+    if (count < total.length) {
+      setPreviousPagination(true);
+      setNextPagination(false);
     }
+
+    console.log((page * 10) + params);
   }
+
+  const recarregaProcessos = useCallback((params) => {
+    buscaProcessos(params, setProcessosContext);
+    pagination(total.length);
+  }, [processosContext, total]);
 
   function handleDelete(id) {
     const mensagem = 'Deseja realmente excluir esse processo?';
@@ -65,7 +71,8 @@ function Processos() {
 
   useEffect(() => {
     recarregaProcessos(`/codigopenal?_page=${page}_limit=10`);
-  }, [page, continuePagination]);
+    pagination(total.length);
+  }, [page, previousPagination, nextPagination, total]);
 
   useEffect(() => {
     buscaProcessos(`/codigopenal?_page=${page}_limit=10`, setProcessosContext);
@@ -142,10 +149,10 @@ function Processos() {
           </div>
 
           <div className="button-paginate">
-            <button type="button" onClick={() => handlePreviousPage()} disabled={!continuePagination}>
+            <button type="button" onClick={() => handlePreviousPage()} disabled={previousPagination}>
               <FaArrowLeft />
             </button>
-            <button type="button" onClick={() => handleNextPage()} disabled={continuePagination}>
+            <button type="button" onClick={() => handleNextPage()} disabled={nextPagination}>
               <FaArrowRight />
             </button>
           </div>

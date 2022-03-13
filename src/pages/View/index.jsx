@@ -3,6 +3,7 @@ import {
   Link, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams,
 } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { alteraProcesso, buscaProcesso } from '../../api';
 import Formater from '../../utils/format';
 import Container from './styles';
@@ -21,6 +22,7 @@ function View() {
 
   const [edit, setEdit] = useState(false);
   const [codigo, setCodigoPenal] = useState({});
+  const [skeleton, setSkeleton] = useState(true);
 
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
@@ -187,10 +189,8 @@ function View() {
               </div>
             </div>
           </div>
-
         </div>
       )}
-
     </Container>
   );
 }
