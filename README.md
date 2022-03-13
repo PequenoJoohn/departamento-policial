@@ -6,7 +6,7 @@ O departamento de polícia da cidade local não conseguia administrar e registra
 
 ## Requisitos 📃
 
-Tela de autenticação com os campos de usuário e senha;
+- [✔] Tela de autenticação com os campos de usuário e senha;
 - [✔] Tela de listagem dos Códigos Penais com os campos Nome, Data, Multa e Status.
   - [❌] Ordenação
   - [❌] Filtro
